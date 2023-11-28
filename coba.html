@@ -1,0 +1,712 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    // $(function () {
+    //     $("input[name='chkPassPort']").click(function () {
+    //         if ($("#chkYes").is(":checked")) {
+    //             $("#txtPassportNumber").removeAttr("disabled");
+    //             $("#txtPassportNumber").focus();
+    //         } else {
+    //             $("#txtPassportNumber").attr("disabled", "disabled");
+    //             $("txtPassportNumber").val("");
+    //         }
+    //     });
+    // });
+    
+</script>
+
+<script>
+  $(function(){
+      disabled_cb();
+      $("#t_05").click(disabled_cb);
+  });
+
+  function disabled_cb(){
+      if (this.click){
+          $("input.hambatan").attr("disabled", true);
+      } else{
+          $("input.hambatan").removeAttr("disabled");
+      }
+  }
+</script>
+<script>
+  $(function(){
+      enable_cb();
+      $("#t_05").click(enable_cb);
+  });
+
+  function enable_cb(){
+      if (this.click){
+          $("input.hambatan").removeAttr("disabled");
+      } else{
+          $("input.hambatan").attr("disabled", true);
+      }
+  }
+</script>
+<span>Do you have Passport?</span>
+<label for="chkYes">
+    <input type="radio" id="chkYes" name="chkPassPort" />
+    Yes
+</label>
+<label for="chkNo">
+    <input type="radio" id="chkNo" name="chkPassPort" />
+    No
+</label>
+<hr />
+Passport Number:
+<input type="text" id="txtPassportNumber" disabled="disabled" /><br>
+
+<input type="radio" id="option1" name="group">
+<label for="option1">Option 1</label><br>
+<input type="radio" id="option2" name="group">
+<label for="option2">Option 2</label><br>
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(function() {
+         $('input[type="radio"]').click(function() {
+            $('#sum').text(parseInt($('input[name="option1"]:checked').val()*1) + parseInt($('input[name="option2"]:checked').val()*1)  + parseInt($('input[name="option3"]:checked').val()*1));
+         });
+      });
+   </script>
+</head>
+<body>
+   <div style="display: flex;">
+      <div>
+         <form>
+            <label><input type="radio" name="option1" value="10">10</label><br>
+            <label><input type="radio" name="option1" value="20">20</label><br>
+            <label><input type="radio" name="option1" value="20">20</label><br>
+            <label><input type="radio" name="option1" value="20">20</label><br>
+            <label><input type="radio" name="option1" value="20">20</label><br>
+            <label><input type="radio" name="option1" value="20">20</label><br>
+         </form>
+      </div>
+      <div>
+         <form>
+            <label><input type="radio" name="option2" value="100" checked>100</label><br>
+            <label><input type="radio" name="option2" value="200">200</label><br>
+            <label><input type="radio" name="option2" value="200">200</label><br>
+            <label><input type="radio" name="option2" value="200">200</label><br>
+            <label><input type="radio" name="option2" value="200">200</label><br>
+            <label><input type="radio" name="option2" value="200">200</label><br>
+            
+         </form>
+      </div>
+      <div>
+        <form>
+           <label><input type="radio" name="option3" value="600" checked>600</label><br>
+           <label><input type="radio" name="option3" value="500">500</label><br>
+           <label><input type="radio" name="option3" value="400">400</label><br>
+           <label><input type="radio" name="option3" value="200">200</label><br>
+           <label><input type="radio" name="option3" value="600">600</label><br>
+           <label><input type="radio" name="option3" value="100">100</label><br>
+           
+        </form>
+     </div>
+   </div>
+   <div>
+      Sum: <span id="sum">15</span>
+   </div>
+
+   
+   <!DOCTYPE html>
+<html>
+<head>
+	<title>Global Deface Script Archive</title>
+	<style type="text/css">
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		center {
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 0;
+		}
+
+		h2 {
+			font-size: 28px;
+			margin-top: 0;
+		}
+
+		h3 {
+			color: white;
+			margin-top: 0;
+		}
+
+		hr {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.scroll {
+			height: 300px;
+			overflow: auto;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-bottom: 20px;
+		}
+
+		th {
+			background-color: #f2f2f2;
+			text-align: left;
+		}
+
+		td, th {
+			padding: 8px;
+			border: 1px solid #ddd;
+		}
+
+		.cari-media {
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			background-color: #f8f8f8;
+			font-size: 16px;
+			background-image: url('https://cdn.icon-icons.com/icons2/1650/PNG/512/111155-zoom-icon_111245.png');
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			padding-left: 40px;
+		}
+
+		.cta {
+			background-color: #1c1c1c;
+			color: white;
+			padding: 8px 16px;
+			border-radius: 4px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 20px;
+		}
+
+		.cta:hover {
+			background-color: #333;
+		}
+
+		.pagination {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+		}
+
+		.prev, .next {
+			background-color: #1c1c1c;
+			color: white;
+			padding: 8px 16px;
+			border-radius: 4px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+			margin: 0 5px;
+		}
+
+		.prev:hover, .next:hover {
+			background-color: #333;
+		}
+
+		.disabled {
+			opacity: 0.5;
+			cursor: default;
+		}
+
+		@media screen and (max-width: 600px) {
+			.cari-media {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1 class="global-header">Global Deface Script Archive</h1>
+<div class="scroll">
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Script Name</th>
+<th>Author</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>scdeface-1</td>
+<td>anonymous</td>
+<td>2021-01-01</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pagination">
+<button class="prev disabled">Prev</button>
+<button class="next">Next</button>
+</div>
+</center>
+<script type="text/javascript">
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+	let currentPage = 5;
+	const scriptsPerPage = 5;
+	const scripts = ['scdeface-1', 'scdeface-2', 'scdeface-3', 'scdeface-4', 'scdeface-5', 'scdeface-6', 'scdeface-7', 'scdeface-8', 'scdeface-9', 'scdeface-10', 'scdeface-11', 'scdeface-12', 'scdeface-13', 'scdeface-14', 'scdeface-15', 'scdeface-16', 'scdeface-17', 'scdeface-18', 'scdeface-19', 'scdeface-20'];
+
+	function displayScripts(start, end) {
+		const table = document.querySelector('table tbody');
+		table.innerHTML = '';
+		for (let i = start; i < end; i++) {
+			const script = scripts[i];
+			const row = `<tr><td>${i+1}</td><td>${script}</td><td>anonymous</td><td>2021-01-01</td></tr>`;
+			table.insertAdjacentHTML('beforeend', row);
+		}
+	}
+
+	function updatePagination() {
+		if (currentPage === 1) {
+			prevButton.classList.add('disabled');
+		} else {
+			prevButton.classList.remove('disabled');
+		}
+		if (currentPage === Math.ceil(scripts.length / scriptsPerPage)) {
+			nextButton.classList.add('disabled');
+		} else {
+			nextButton.classList.remove('disabled');
+		}
+	}
+
+	displayScripts(0, scriptsPerPage);
+	updatePagination();
+
+	prevButton.addEventListener('click', () => {
+		if (currentPage > 1) {
+			currentPage--;
+			const start = (currentPage - 1) * scriptsPerPage;
+			const end = start + scriptsPerPage;
+			displayScripts(start, end);
+			updatePagination();
+		}
+	});
+
+	nextButton.addEventListener('click', () => {
+		if (currentPage < Math.ceil(scripts.length / scriptsPerPage)) {
+			currentPage++;
+			const start = (currentPage - 1) * scriptsPerPage;
+			const end = start + scriptsPerPage;
+			displayScripts(start, end);
+			updatePagination();
+		}
+	});
+</script>
+</body>
+</html>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Membuat Tambah, Sisip, Hapus Menggunakan Javascript & html</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<h3>Membuat Tambah, Sisip, Hapus Baris Menggunakan Javascript & Html</h3>
+<table id="satuan" class="w-full table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="text-center" width="4"> Action </th>
+            <th class="text-center">Nama</th>
+            <th class="text-center">Keterangan</th>
+        </tr>
+    </thead>
+    <tbody id="tbody2">
+        <tr>
+            <td><input name="chk_a[]" type="checkbox" class="checkall_a" value=""/></td>
+            <td>
+                <div class="form-group">
+                <input type="text" class="form-control" required="required" name="nama[]" placeholder="Nama satuan">
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                <input type="text" class="form-control" name="keterangan[]" placeholder="Keterangan satuan">
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+          <tr>
+            <td colspan="3" align="center">
+            <button type="button" class="btn btn-primary" onclick="addRow('tbody2')">Tambah Baris</button>
+            <button type="button" class="btn btn-warning" onclick="InsertRow('tbody2')">Sisip Baris</button>
+            <button type="button" class="btn btn-danger" onclick="deleteRow('tbody2')">Hapus Baris</button>
+            </td>
+          </tr>
+    </tfoot>
+</table>
+<footer>
+    <a href="https://matadeveloper.com">Author By Matadeveloper.com</a>
+</footer>
+<script type="text/javascript">
+    
+   // JavaScript Document
+function addRow(tableID) {
+    var table = document.getElementById(tableID);
+    var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+    var colCount = table.rows[0].cells.length;
+    for(var i=0; i<colCount; i++) {
+        var newcell = row.insertCell(i);
+        newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+        var child = newcell.children;
+        for(var i2=0; i2<child.length; i2++) {
+            var test = newcell.children[i2].tagName;
+            switch(test) {
+                case "INPUT":
+                    if(newcell.children[i2].type=='checkbox'){
+                        newcell.children[i2].value = "";
+                        newcell.children[i2].checked = false;
+                    }else{
+                        newcell.children[i2].value = "";
+                    }
+                break;
+                case "SELECT":
+                    newcell.children[i2].value = "";
+                break;
+                default:
+                break;
+            }
+        }
+    }
+}
+    
+function deleteRow(tableID)
+{
+    try
+         {
+        var table = document.getElementById(tableID);
+        var rowCount = table.rows.length;
+            for(var i=0; i<rowCount; i++)
+                {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if (null != chkbox && true == chkbox.checked)
+                    {
+                    if (rowCount <= 1)
+                        {
+                        alert("Tidak dapat menghapus semua baris.");
+                        break;
+                        }
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                    }
+                }
+            } catch(e)
+    {
+    alert(e);
+    }
+ }
+ 
+ function InsertRow(tableID)
+{
+    try{
+        var table = document.getElementById(tableID);
+        var rowCount = table.rows.length;
+            for(var i=0; i<rowCount; i++)
+                {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if (null != chkbox && true == chkbox.checked)
+                    {
+                    var newRow = table.insertRow(i+1);
+                    var colCount = table.rows[0].cells.length;
+                        for (h=0; h<colCount; h++){
+                            var newCell = newRow.insertCell(h);
+                            newCell.innerHTML = table.rows[0].cells[h].innerHTML;
+                            var child = newCell.children;
+                            for(var i2=0; i2<child.length; i2++) {
+                                var test = newCell.children[i2].tagName;
+                                switch(test) {
+                                    case "INPUT":
+                                        if(newCell.children[i2].type=='checkbox'){
+                                            newCell.children[i2].value = "";
+                                            newCell.children[i2].checked = false;
+                                        }else{
+                                            newCell.children[i2].value = "";
+                                        }
+                                    break;
+                                    case "SELECT":
+                                        newCell.children[i2].value = "";
+                                    break;
+                                    default:
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            } catch(e)
+    {
+    alert(e);
+    }
+ }
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script>
+    var myTableDiv = document.getElementById("DivTable");
+           var tableBody = document.getElementById("tBody");
+           var table = document.getElementById('Table');
+           for (var i = 0; i < 3; i++) {
+            var tr = document.getElementById('tableRow');               
+            var TD1= document.getElementById('FirstColumn');
+            var TD2= document.getElementById('ScondColumn');
+            var TD3= document.getElementById('ThirdColumn');
+            var TD4= document.getElementById('FourthColumn');
+            var TD5= document.getElementById('FifthColumn');
+            tr.appendChild(TD1);
+            tr.appendChild(TD2);
+            tr.appendChild(TD3);
+            tr.appendChild(TD4);
+            tr.appendChild(TD5);
+
+        tableBody.appendChild(tr);
+
+    myTableDiv.appendChild(table);
+}
+</script>
+
+<div class="MgmtView" id="DivTable">
+    <table class="projectMgmtTable" width="100%" id="Table">
+        <thead>
+            <tr>
+                <th><h4>Review</h4></th>
+                <th>Sort
+                    <select>
+                        <option>Sample 1</option>
+                        <option>Sample 2</option>
+                    </select> 
+                    <div>
+                        <div class="sortUpArrow"></div>
+                        <div class="sortDownArrow"></div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tBody">
+            <tr class="rowTable" id="tableRow">
+                <td id="FirstColumn">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">ID</div>
+                            <div class="labelRight">1</div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelHead">Address</div>
+                            <div class="labelLeft">
+                                <textarea placeholder="Risk Description Here" rows="11"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td id="ScondColumn">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Location</div>
+                            <div class="labelRight">
+                                <select disabled="disabled">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Country</div>
+                            <div class="labelRight">
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Division</div>
+                            <div class="labelRight">
+                                <select class="showRpn">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row rpnSection dispNone">
+                        <div class="table-cell">
+                            <div class="labelLeft">Amount</div>
+                            <div class="labelRight">
+                                <input value="123" class="greenBg" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">date of birth</div>
+                            <div class="labelRight">
+                                <input type="text" disabled="disabled" class="calendar" />
+                            </div>
+                        </div>
+                    </div>                      
+                </td>
+                <td id="ThirdColumn">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelHead">Relationship</div>
+                            <div class="labelLeft">
+                                <textarea disabled="disabled" placeholder="Risk Description Here" rows="8"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Date</div>
+                            <div class="labelRight">
+                                <input disabled="disabled" type="text" class="calendar" />
+                            </div>
+                        </div>
+                    </div>  
+                     <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">MStatus</div>
+                            <div class="labelRight">
+                                <select>
+                                    <option>Open</option>
+                                    <option>Active</option>
+                                    <option>Closed</option>
+                                    <option>Resolved</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>    
+                </td>
+                <td id="FourthColumn">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelHead">Plan</div>
+                            <div class="labelLeft">
+                                <textarea placeholder="Risk Description Here" rows="8"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Target Date</div>
+                            <div class="labelRight">
+                                <input type="text" class="calendar" />
+                            </div>
+                        </div>
+                    </div>  
+                     <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Status</div>
+                            <div class="labelRight">
+                                <select>
+                                    <option>Open</option>
+                                    <option>Active</option>
+                                    <option>Closed</option>
+                                    <option>Resolved</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>    
+                </td>
+                <td id="FifthColumn">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Status</div>
+                            <div class="labelRight">
+                                <select>
+                                    <option>Open</option>
+                                    <option>Active</option>
+                                    <option>Closed</option>
+                                    <option>Resolved</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Category</div>
+                            <div class="labelRight">
+                                <select>
+                                    <option>Sample 1</option>
+                                    <option>Sample 2</option>
+                                    <option>Sample 3</option>
+                                    <option>Sample 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Status</div>
+                            <div class="labelRight">
+                                <select>
+                                    <option>Sample 1</option>
+                                    <option>Sample 2</option>
+                                    <option>Sample 3</option>
+                                    <option>Sample 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="labelLeft">Action</div>
+                            <div class="labelRight">
+                                <select>
+                                    <option>Sample 1</option>
+                                    <option>Sample 2</option>
+                                    <option>Sample 3</option>
+                                    <option>Sample 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="noBorder">
+                <td colspan="5">&nbsp;</td>
+            </tr>
+           </tbody>
+    </table>
+
+
+
+</body>
+</html>
