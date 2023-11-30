@@ -167,10 +167,10 @@
         $(function f5 () {
             $("input[name='t_06']").click(function f5 () {
                 if ($("#t_06_ada").is(":checked")) {
-                    $("#v_81, #v_82, #v_83").removeAttr("disabled");
+                    $("#Riwayat_alergi").removeAttr("disabled");
                 } else {
-                    $("#v_81, #v_82, #v_83").attr("disabled", true);
-                    $("#v_81, #v_82, #v_83").val("");
+                    $("#Riwayat_alergi").attr("disabled", true);
+                    $("#Riwayat_alergi").val("");
                 }
             });
         });
@@ -228,7 +228,7 @@
                               <label>Tanggal Lahir</label>
                             </div>
                             <div class="col-7">
-                              <input class="form-control" type="date" name="v_03" id="v_03" readonly></div>
+                              <input class="form-control" type="date" name="date_of_birth id="date_of_birth readonly></div>
                           </div>
                           <div class="row">
                             <div class="col-5">
@@ -537,20 +537,10 @@
                         <div class="col-md-6">
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                  <label class="col-form-label">Tanggal berobat di ruang poliklinik : </label>
+                                  <label class="col-form-label">Tanggal dan jam berobat di ruang poliklinik : </label>
                                 </div>
                                 <div class="col-md-5">
-                                  <input class="form-control" type="date" name="v_09" id="v_09">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row align-items-center">
-                                <div class="col-md-2">
-                                  <label class="col-form-label">Jam</label>
-                                </div>
-                                <div class="col-md-5">
-                                  <input class="form-control" type="time" name="v_10" id="v_10">
+                                  <input class="form-control" type="datetime-local" name="examination_date" id="examination_date">
                                 </div>
                             </div>
                         </div>
@@ -586,7 +576,7 @@
                           <label class="col-form-label">Keluhan Utama</label>
                         </div>
                         <div class="col-md-9">
-                          <textarea class="form-control" name="v_11" id="v_11" cols="5" rows="2"></textarea>
+                          <textarea class="form-control" name="anamnase" id="anamnase" cols="5" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="row align-items-center">
@@ -607,7 +597,7 @@
                     </div>
                     <div class="row align-items-center">
                         <div class="col-md-3">
-                          <label class="col-form-label">Riwayat Penyakit Keluargas</label>
+                          <label class="col-form-label">Riwayat Penyakit Keluarga</label>
                         </div>
                         <div class="col-md-9">
                           <textarea class="form-control" name="v_14" id="v_14" cols="5" rows="2"></textarea>
@@ -668,28 +658,11 @@
                                 <label for="t_06_ada">Ada, Sebutkan</label>
                             </div>  
                             <div class="row align-items-center">
-                                <div class="col-md-1">
-                                  <label class="col-form-label">1</label>
-                                </div>
-                                <div class="col-md-8">
-                                  <input class="form-control" type="text" name="v_81" id="v_81" disabled="disabled">
+                                <div class="col-md-6">
+                                    <textarea class="form-control" name="Riwayat_alergi" id="Riwayat_alergi" cols="6" rows="4" disabled="disabled"></textarea>
                                 </div>
                             </div>
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                  <label class="col-form-label">2</label>
-                                </div>
-                                <div class="col-md-8">
-                                  <input class="form-control" type="text" name="v_82" id="v_82" disabled="disabled">
-                                </div>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                  <label class="col-form-label">3</label>
-                                </div>
-                                <div class="col-md-8">
-                                  <input class="form-control" type="text" name="v_83" id="v_83" disabled="disabled">
-                                </div>
+                            
                             </div>
                         </div>
                     </div>
